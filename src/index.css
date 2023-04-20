@@ -26,8 +26,12 @@ html, body{
   @apply grid grid-cols-3 bg-pink-300/50 border-2 border-indigo-700 relative
 }
 
+.board-piece {
+  @apply w-28 h-28 text-5xl font-bold border-2 border-indigo-700 flex items-center justify-center text-indigo-700
+}
+
 .board-piece:not(.hakan) {
-  @apply w-28 h-28 text-5xl font-bold border-2 border-indigo-700 flex items-center justify-center text-indigo-700 hover:scale-110 hover:bg-indigo-700 hover:rounded-lg hover:text-pink-300 hover:after:content-[attr(sign)] transition-transform duration-500
+  @apply hover:scale-110 hover:bg-indigo-700 hover:rounded-lg hover:text-pink-300 hover:after:content-[attr(sign)] transition-transform duration-500
 }
 
 .line {
@@ -36,4 +40,8 @@ html, body{
 
 #deneme:checked + .line {
   @apply w-96
+}
+
+.btn {
+  @apply text-xl mb-5 px-4 py-2 font-medium text-indigo-700 transition-all duration-300 hover:scale-125 hover:border hover:border-pink-300 hover:rounded-2xl
 }
